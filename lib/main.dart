@@ -5,7 +5,7 @@ import 'package:memory_game/data/data.dart';
 import 'package:memory_game/models/TileModel.dart';
 
 void main() => runApp(MyApp());
-
+    //main page components and functions
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
+// stateful functions
 class Home extends StatefulWidget {
   @override
   _HomeState createState() => _HomeState();
@@ -38,16 +38,16 @@ class _HomeState extends State<Home> {
   }
   void reStart() {
 
-    myPairs = getPairs();
-    myPairs.shuffle();
+    settedNumbers = getNumberList();
+    settedNumbers.shuffle();
 
-    gridViewTiles = myPairs;
+    gridViewTiles = settedNumbers;
     Future.delayed(const Duration(seconds: 5), () {
 // Here you can write your code
       setState(() {
         print("2 seconds done");
         // Here you can write your code for open new view
-        questionPairs = getQuestionPairs();
+        questionPairs = getNumberList();
         gridViewTiles = questionPairs;
         selected = false;
       });
@@ -94,7 +94,7 @@ class _HomeState extends State<Home> {
                     mainAxisSpacing: 0.0, maxCrossAxisExtent: 100.0),
                 children: List.generate(gridViewTiles.length, (index) {
                   return Tile(
-                    imagePathUrl: gridViewTiles[index].getImageAssetPath(),
+                    number: gridViewTiles[index].getNumber(),
                     tileIndex: index,
                     parent: this,
                   );
@@ -161,11 +161,12 @@ class _HomeState extends State<Home> {
 
 
 class Tile extends StatefulWidget {
-  String imagePathUrl;
+ // String imagePathUrl;
+  String number;
   int tileIndex;
   _HomeState parent;
 
-  Tile({this.imagePathUrl, this.tileIndex, this.parent});
+  Tile({this.number, this.tileIndex, this.parent});
 
   @override
   _TileState createState() => _TileState();
@@ -178,41 +179,41 @@ class _TileState extends State<Tile> {
       onTap: () {
         if (!selected) {
           setState(() {
-            myPairs[widget.tileIndex].setIsSelected(true);
+            settedNumbers[widget.tileIndex].setIsSelected(true);
           });
           if (selectedTile != "") {
             /// testing if the selected tiles are same
-            if (selectedTile == myPairs[widget.tileIndex].getImageAssetPath()) {
+            if (selectedTile == settedNumbers[widget.tileIndex].getNumber()) {
               print("add point");
               points = points + 100;
-              print(selectedTile + " thishis" + widget.imagePathUrl);
+              print(selectedTile + " thishis : seçtiğimizi yazıyoruz : number : " + widget.number);
 
               TileModel tileModel = new TileModel();
               print(widget.tileIndex);
               selected = true;
-              Future.delayed(const Duration(seconds: 2), () {
-                tileModel.setImageAssetPath("");
-                myPairs[widget.tileIndex] = tileModel;
-                print(selectedIndex);
-                myPairs[selectedIndex] = tileModel;
-                this.widget.parent.setState(() {});
-                setState(() {
-                  selected = false;
-                });
-                selectedTile = "";
-              });
+              // Future.delayed(const Duration(seconds: 2), () {
+              //   tileModel.setImageAssetPath("");
+              //   myPairs[widget.tileIndex] = tileModel;
+              //   print(selectedIndex);
+              //   settedNumbers[selectedIndex] = tileModel;
+              //   this.widget.parent.setState(() {});
+              //   setState(() {
+              //     selected = false;
+              //   });
+              //   selectedTile = "";
+              // });
             } else {
               print(selectedTile +
                   " thishis " +
-                  myPairs[widget.tileIndex].getImageAssetPath());
+                  settedNumbers[widget.tileIndex].getNumber());
               print("wrong choice");
               print(widget.tileIndex);
               print(selectedIndex);
               selected = true;
               Future.delayed(const Duration(seconds: 2), () {
                 this.widget.parent.setState(() {
-                  myPairs[widget.tileIndex].setIsSelected(false);
-                  myPairs[selectedIndex].setIsSelected(false);
+                  settedNumbers[widget.tileIndex].setIsSelected(false);
+                  settedNumbers[selectedIndex].setIsSelected(false);
                 });
                 setState(() {
                   selected = false;
@@ -223,7 +224,7 @@ class _TileState extends State<Tile> {
             }
           } else {
             setState(() {
-              selectedTile = myPairs[widget.tileIndex].getImageAssetPath();
+              selectedTile = settedNumbers[widget.tileIndex].getNumber();
               selectedIndex = widget.tileIndex;
             });
 
@@ -234,13 +235,13 @@ class _TileState extends State<Tile> {
       },
       child: Container(
         margin: EdgeInsets.all(5),
-        child: myPairs[widget.tileIndex].getImageAssetPath() != ""
-            ? Image.asset(myPairs[widget.tileIndex].getIsSelected()
-                ? myPairs[widget.tileIndex].getImageAssetPath()
-                : widget.imagePathUrl)
+        child: settedNumbers[widget.tileIndex].getNumber() != null
+            ? (settedNumbers[widget.tileIndex].getIsSelected()
+                ? settedNumbers[widget.tileIndex].getNumber()
+                : widget.number)
             : Container(
                 color: Colors.white,
-                child: Image.asset("assets/correct.png"),
+                child: Text(widget.number),
               ),
       ),
     );

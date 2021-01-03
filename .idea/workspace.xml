@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ea09e627-03b4-4246-ad7a-a52a4568af81" name="Default Changelist" comment="" />
+    <list default="true" id="ea09e627-03b4-4246-ad7a-a52a4568af81" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/data.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/data.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/models/TileModel.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/models/TileModel.dart" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -23,6 +28,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="android.sdk.path" value="$USER_HOME$/Development/Android/sdk" />
     <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="io.flutter.reload.alreadyRun" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="dart.settings" />
     <property name="show.migrate.to.gradle.popup" value="false" />
@@ -47,9 +53,29 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1878" height="82" key="GridCell.Tab.0.bottom" timestamp="1609687680304">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="82" key="GridCell.Tab.0.bottom/0.23.1440.828/1440.23.1920.1057@1440.23.1920.1057" timestamp="1609687680304" />
+    <state width="1878" height="82" key="GridCell.Tab.0.center" timestamp="1609687680303">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="82" key="GridCell.Tab.0.center/0.23.1440.828/1440.23.1920.1057@1440.23.1920.1057" timestamp="1609687680303" />
+    <state width="1878" height="82" key="GridCell.Tab.0.left" timestamp="1609687680303">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="82" key="GridCell.Tab.0.left/0.23.1440.828/1440.23.1920.1057@1440.23.1920.1057" timestamp="1609687680303" />
+    <state width="1878" height="82" key="GridCell.Tab.0.right" timestamp="1609687680304">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="82" key="GridCell.Tab.0.right/0.23.1440.828/1440.23.1920.1057@1440.23.1920.1057" timestamp="1609687680304" />
     <state x="1642" y="104" key="SettingsEditor" timestamp="1609679915798">
       <screen x="1440" y="23" width="1920" height="1057" />
     </state>
     <state x="1642" y="104" key="SettingsEditor/0.23.1440.828/1440.23.1920.1057@1440.23.1920.1057" timestamp="1609679915798" />
+    <state x="2244" y="212" width="615" height="548" key="find.popup" timestamp="1609686577318">
+      <screen x="1440" y="23" width="1920" height="1057" />
+    </state>
+    <state x="2244" y="212" width="615" height="548" key="find.popup/0.23.1440.828/1440.23.1920.1057@1440.23.1920.1057" timestamp="1609686577318" />
   </component>
 </project>

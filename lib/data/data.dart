@@ -5,145 +5,136 @@ int selectedIndex ;
 bool selected = true;
 int points = 0;
 
-List<TileModel> myPairs = new List<TileModel>();
+List<TileModel> settedNumbers = new List<TileModel>();
 List<bool> clicked = new List<bool>();
 
 List<bool> getClicked(){
 
   List<bool> yoClicked = new List<bool>();
-  List<TileModel> myairs = new List<TileModel>();
-  myairs = getPairs();
-  for(int i=0;i<myairs.length;i++){
+  List<TileModel> mypairs = new List<TileModel>();
+  mypairs = getNumberList();
+  for(int i=0;i<mypairs.length;i++){
     yoClicked[i] = false;
   }
 
   return yoClicked;
 }
 
-List<TileModel>  getPairs(){
+List<TileModel>  getNumberList(){
 
-  List<TileModel> pairs = new List<TileModel>();
-
-  TileModel tileModel = new TileModel();
-
-  //1
-  tileModel.setImageAssetPath("assets/fox.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  //2
-  tileModel.setImageAssetPath("assets/hippo.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  //3
-  tileModel.setImageAssetPath("assets/horse.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  //4
-  tileModel.setImageAssetPath("assets/monkey.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-  //5
-  tileModel.setImageAssetPath("assets/panda.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  //6
-  tileModel.setImageAssetPath("assets/parrot.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  //7
-  tileModel.setImageAssetPath("assets/rabbit.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  //8
-  tileModel.setImageAssetPath("assets/zoo.png");
-  tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
-  tileModel = new TileModel();
-
-  return pairs;
-}
-
-List<TileModel>  getQuestionPairs(){
-
-  List<TileModel> pairs = new List<TileModel>();
+  List<TileModel> numbers = new List<TileModel>();
 
   TileModel tileModel = new TileModel();
 
   //1
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("1");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
 
   //2
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("2");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
 
   //3
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("3");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
 
   //4
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("4");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
   //5
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("5");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
 
   //6
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("6");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
 
   //7
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("7");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
-
   //8
-  tileModel.setImageAssetPath("assets/question.png");
+  tileModel.setNumber("8");
   tileModel.setIsSelected(false);
-  pairs.add(tileModel);
-  pairs.add(tileModel);
+  numbers.add(tileModel);
   tileModel = new TileModel();
 
-  return pairs;
+  return numbers;
 }
+
+// List<TileModel>  getQuestionPairs(){
+//
+//   List<TileModel> pairs = new List<TileModel>();
+//
+//   TileModel tileModel = new TileModel();
+//
+//   //1
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   //2
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   //3
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   //4
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//   //5
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   //6
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   //7
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   //8
+//   tileModel.setImageAssetPath("assets/question.png");
+//   tileModel.setIsSelected(false);
+//   pairs.add(tileModel);
+//   pairs.add(tileModel);
+//   tileModel = new TileModel();
+//
+//   return pairs;
+// }

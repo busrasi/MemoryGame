@@ -1,16 +1,16 @@
 class TileModel{
 
-  String imageAssetPath;
+  String number;
   bool isSelected;
 
-  TileModel({this.imageAssetPath, this.isSelected});
+  TileModel({this.number, this.isSelected});
 
-  void setImageAssetPath(String getImageAssetPath){
-    imageAssetPath = getImageAssetPath;
+  void setNumber(String getNumber){
+    number = getNumber;
   }
 
-  String getImageAssetPath(){
-    return imageAssetPath;
+  String getNumber(){
+    return number;
   }
 
   void setIsSelected(bool getIsSelected){
