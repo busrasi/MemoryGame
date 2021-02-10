@@ -1,4 +1,4 @@
-https://schulte-table.com  - I did Classic Light.
+https://schulte-table.com  - Classic Light.
 
 Memory game made with flutter.
 
