@@ -1,6 +1,6 @@
 
 
-Sharpen your memory and spend time playing this fun memory game made with flutter, taught on youtube, Memory Game Conneting similar images game made with Flutter.
+Memory game made with flutter.
 
 ### Created by
     Büşra Şirin 
